@@ -1,0 +1,12 @@
+[Unit]
+Description= Script de captura de imagem e publicacao no twitter
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/pi/services/tweet.py > /home/pi/services/tweet.log 2>&1
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target

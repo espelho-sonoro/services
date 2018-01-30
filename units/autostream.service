@@ -1,0 +1,12 @@
+[Unit]
+Description=servico de conexao 3g e stream de audio 
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/home/pi/services/autostream.sh > /home/pi/services/autostream.log 2>&1
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

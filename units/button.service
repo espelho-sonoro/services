@@ -1,0 +1,10 @@
+[Unit]
+Description= Scrpt de monitoramento e polling dos botoes=
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/pi/services/button.py > /home/pi/services/button.log 2>&1
+
+[Install]
+WantedBy=multi-user.target
